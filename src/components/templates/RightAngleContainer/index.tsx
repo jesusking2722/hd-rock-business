@@ -22,10 +22,20 @@ const RightAngleContainer: React.FC<RightAngleContainerProps> = ({
   showPlaceholder = true,
   ...props
 }) => {
+  const sizeClasses = {
+    sm: "w-32 h-20",
+    md: "w-64 h-40",
+    lg: "w-96 h-60",
+    xl: "w-[32rem] h-80",
+  };
+
   const hasContent = children || imageUrl;
 
   return (
-    <div className={`relative flex-shrink-0 ${className}`} {...props}>
+    <div
+      className={`relative flex-shrink-0 ${sizeClasses[size]} ${className}`}
+      {...props}
+    >
       <svg
         className="w-full h-full"
         viewBox="0 0 593 395"

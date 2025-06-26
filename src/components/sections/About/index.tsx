@@ -70,14 +70,14 @@ const About = () => {
             </h1>
           </div>
           <div className="absolute inset-0">
-            <div className="w-[80%] translate-y-3/4 mx-auto flex items-center justify-center gap-14">
+            <div className="w-[76%] px-20 translate-y-3/4 mx-auto flex items-center justify-center gap-14">
               {/* Image */}
-              <div className="w-2/5">
+              <div className="w-1/2">
                 <RightAngleContainer imageUrl="/assets/pngs/dji_0136.png" />
               </div>
 
               {/* Steps */}
-              <div className="w-2/5 space-y-10">
+              <div className="w-1/2 space-y-10">
                 <div className="space-y-4">
                   <h2 className="text-3xl font-semibold text-white">
                     Our quarry is located in Norway,
@@ -101,8 +101,8 @@ const About = () => {
                         alt="Vector"
                         className="w-4 h-4"
                       />
-                      <span className="text-xl font-light text-white">
-                        Max LOA: 220 meters
+                      <span className="text-lg font-light text-white">
+                        <strong>Max LOA:</strong> 220 meters
                       </span>
                     </li>
                     <li className="flex items-center gap-2">
@@ -111,8 +111,8 @@ const About = () => {
                         alt="Vector"
                         className="w-4 h-4"
                       />
-                      <span className="text-xl font-light text-white">
-                        Max BOA: 40 meters
+                      <span className="text-lg font-light text-white">
+                        <strong>Max BOA:</strong> 40 meters
                       </span>
                     </li>
                     <li className="flex items-center gap-2">
@@ -121,8 +121,8 @@ const About = () => {
                         alt="Vector"
                         className="w-4 h-4"
                       />
-                      <span className="text-xl font-light text-white">
-                        Max draft: 12 meters
+                      <span className="text-lg font-light text-white">
+                        <strong>Max draft:</strong> 12 meters
                       </span>
                     </li>
                   </ul>

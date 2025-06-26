@@ -1,9 +1,9 @@
-interface LeftAngleContainer {
+interface LeftAngleContainerProps {
   imageUrl?: string;
   children?: React.ReactNode;
 }
 
-const LeftAngleContainer: React.FC<LeftAngleContainer> = ({
+const LeftAngleContainer: React.FC<LeftAngleContainerProps> = ({
   imageUrl,
   children,
 }) => {
@@ -14,8 +14,8 @@ const LeftAngleContainer: React.FC<LeftAngleContainer> = ({
         <div className="relative w-full h-full flex items-center justify-center">
           {/* Folder-shaped background */}
           <svg
-            className="w-full h-auto max-w-full"
-            viewBox="0 0 1810 800"
+            className="w-full h-auto max-w-[1810px] max-h-[920px]"
+            viewBox="0 0 1810 920"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid meet"
