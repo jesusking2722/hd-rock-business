@@ -8,7 +8,7 @@ import {
 
 const Home = () => {
   return (
-    <div className="w-[95%] mx-auto mt-6">
+    <div className="w-[95%] mx-auto lg:mt-6 xl:mt-6 lg:p-0 xl:p-0 px-4">
       <Hero />
       <About />
       <Roadmap />

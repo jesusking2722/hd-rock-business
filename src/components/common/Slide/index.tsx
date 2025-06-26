@@ -7,7 +7,7 @@ export interface ISlide {
 
 const Slide: React.FC<ISlide> = ({ imageUrl, title, description, date }) => {
   return (
-    <div className="w-full flex  gap-4 bg-[#364C62] rounded-xl px-6 py-2">
+    <div className="w-full flex gap-4 bg-[#364C62] rounded-xl xl:px-6 xl:py-2 lg:px-6 lg:py-2 px-4 py-1">
       <div className="w-2/5 h-auto">
         <img
           src={imageUrl}

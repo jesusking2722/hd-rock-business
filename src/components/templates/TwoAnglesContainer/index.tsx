@@ -12,7 +12,7 @@ const TwoAnglesContainer: React.FC<TwoAnglesContainerProps> = ({
   imageUrl,
 }) => {
   return (
-    <div className="relative">
+    <div className="relative lg:block xl:block hidden">
       {/* Custom shaped container */}
       <div className="relative overflow-hidden">
         {/* SVG Shape Container */}

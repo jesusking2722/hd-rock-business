@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const RadioGroup = () => {
-  const [selectedValue, setSelectedValue] = useState("option2"); // Default to second option (orange)
+  const [selectedValue, setSelectedValue] = useState("option2");
 
   const options = [
     { id: "option1", value: "option1", label: "Option 1" },
@@ -22,7 +22,7 @@ const RadioGroup = () => {
           <div key={option.id} className="flex flex-col items-center gap-2">
             <button
               onClick={() => handleChange(option.value)}
-              className={`w-8 h-8 rounded-full border-2 border-[#BDBDBD] shadow-sm transition-all duration-200 ease-in-out focus:outline-none focus:border-[#F9A825] ${
+              className={`lg:w-8 lg:h-8 xl:w-8 xl:h-8 w-6 h-6 rounded-full border-2 border-[#BDBDBD] shadow-sm transition-all duration-200 ease-in-out focus:outline-none focus:border-[#F9A825] ${
                 selectedValue === option.value
                   ? "border-[#F9A825] shadow-[#F9A825]"
                   : "border-[#BDBDBD] shadow-[#BDBDBD]"
@@ -32,9 +32,9 @@ const RadioGroup = () => {
               aria-checked={selectedValue === option.value}
             >
               {selectedValue === option.value ? (
-                <div className="w-4 h-4 bg-[#F9A825] rounded-full mx-auto"></div>
+                <div className="lg:w-4 lg:h-4 xl:w-4 xl:h-4 w-3 h-3 bg-[#F9A825] rounded-full mx-auto"></div>
               ) : (
-                <div className="w-4 h-4 bg-[#BDBDBD] rounded-full mx-auto"></div>
+                <div className="lg:w-4 lg:h-4 xl:w-4 xl:h-4 w-3 h-3 bg-[#BDBDBD] rounded-full mx-auto"></div>
               )}
             </button>
           </div>

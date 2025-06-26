@@ -9,14 +9,14 @@ const ContactForm = () => {
   const [message, setMessage] = useState<string>("");
 
   return (
-    <div className="w-full bg-[#364C62] rounded-2xl p-8">
-      <div className="w-full flex">
-        <div className="w-1/2 flex flex-col items-start justify-between">
+    <div className="w-full bg-[#364C62] lg:rounded-2xl xl:rounded-2xl rounded-lg lg:p-8 xl:p-8 p-4">
+      <div className="w-full lg:flex xl:flex">
+        <div className="lg:w-1/2 xl:w-1/2 w-full flex flex-col items-start justify-between lg:gap-0 xl:gap-0 gap-6">
           <div className="space-y-4">
-            <h1 className="text-white font-extrabold text-5xl font-titillium tracking-wider leading-tight">
+            <h1 className="text-white font-extrabold lg:text-5xl xl:text-5xl text-[32px] font-titillium tracking-wider leading-tight">
               Get In Touch
             </h1>
-            <p className="text-[#F2F2F2] text-2xl font-normal">
+            <p className="text-[#F2F2F2] lg:text-2xl xl:text-2xl text-lg font-normal">
               Please fill the form and will be happy assist you
             </p>
           </div>
@@ -82,7 +82,7 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <div className="w-1/2 bg-[#324659] p-6 rounded-2xl">
+        <div className="lg:w-1/2 xl:w-1/2 w-full bg-[#324659] lg:p-6 xl:p-6 p-4 lg:mt-0 xl:mt-0 mt-6 rounded-2xl">
           <form className="w-full space-y-4">
             <div className="w-full flex flex-row items-center gap-4">
               <div className="w-1/2">
@@ -132,7 +132,7 @@ const ContactForm = () => {
         </div>
       </div>
 
-      <div className="w-full grid grid-cols-3 gap-6 mt-8">
+      <div className="w-full xl:grid xl:grid-cols-3 lg:grid lg:grid-cols-3 flex flex-col gap-6 mt-8">
         <div className="bg-[#324659] rounded-xl flex flex-col gap-4 p-8">
           <div className="flex items-center gap-2">
             <img src="/assets/svgs/email.svg" alt="Email" className="w-7 h-7" />

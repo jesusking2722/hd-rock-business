@@ -23,17 +23,17 @@ const RightAngleContainer: React.FC<RightAngleContainerProps> = ({
   ...props
 }) => {
   const sizeClasses = {
-    sm: "w-32 h-20",
-    md: "w-64 h-40",
-    lg: "w-96 h-60",
-    xl: "w-[32rem] h-80",
+    sm: "w-full max-w-xs h-auto aspect-[593/395]",
+    md: "w-full max-w-md h-auto aspect-[593/395]",
+    lg: "w-full max-w-2xl h-auto aspect-[593/395]",
+    xl: "w-full max-w-4xl h-auto aspect-[593/395]",
   };
 
   const hasContent = children || imageUrl;
 
   return (
     <div
-      className={`relative flex-shrink-0 ${sizeClasses[size]} ${className}`}
+      className={`relative w-full aspect-[593/395] ${sizeClasses[size]} ${className}`}
       {...props}
     >
       <svg
@@ -86,7 +86,7 @@ const RightAngleContainer: React.FC<RightAngleContainerProps> = ({
         <g mask="url(#containerMask)">
           {imageUrl ? (
             <foreignObject x="12" y="12" width="569" height="371">
-              <div className="w-full h-full overflow-hidden">
+              <div className="w-full h-full">
                 <img
                   src={imageUrl}
                   alt={alt}
@@ -121,7 +121,6 @@ const RightAngleContainer: React.FC<RightAngleContainerProps> = ({
               fill="#f8fafc"
               className="fill-slate-50 dark:fill-slate-900"
             />
-            {/* Simple placeholder icon */}
             <g transform="translate(296.5, 197.5)">
               <rect
                 x="-20"
