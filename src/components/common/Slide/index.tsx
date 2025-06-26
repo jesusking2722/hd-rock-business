@@ -12,7 +12,7 @@ const Slide: React.FC<ISlide> = ({ imageUrl, title, description, date }) => {
         <img
           src={imageUrl}
           alt={title}
-          className="w-full h-full object-cover rounded-xl"
+          className="w-full h-full object-cover rounded-md"
         />
       </div>
       <div className="w-3/5 flex flex-col py-4">

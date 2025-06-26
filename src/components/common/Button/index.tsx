@@ -23,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      className={`${buttonTypeStyles[type]} text-lg font-normal rounded-lg px-6 py-2 flex items-center justify-center gap-2 ${className}`}
+      className={`${buttonTypeStyles[type]} text-lg font-normal transition-all duration-200 ease-in-out hover:opacity-80 rounded-lg px-6 py-2 flex items-center justify-center gap-2 ${className}`}
     >
       {label}
       {iconUrl && (

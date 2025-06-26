@@ -10,16 +10,16 @@ const TrackRecord = () => {
       date: "2-01-2020",
     },
     {
-      imageUrl: "/assets/pngs/slide1.png",
-      title: "DolWin kappa",
-      description: "Energy Infrastructure",
-      date: "2-01-2020",
+      imageUrl: "/assets/pngs/slide2.png",
+      title: "Viking Link",
+      description: "Energy Interconnector",
+      date: "12-01-2021",
     },
     {
       imageUrl: "/assets/pngs/slide1.png",
-      title: "DolWin kappa",
-      description: "Energy Infrastructure",
-      date: "2-01-2020",
+      title: "Baltic Pipe",
+      description: "Gas Pipeline",
+      date: "10-01-2023",
     },
   ];
 

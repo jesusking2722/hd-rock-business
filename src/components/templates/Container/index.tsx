@@ -1,4 +1,5 @@
-import { Header } from "../../organism";
+import { Footer, Header } from "../../organism";
+import { Contact } from "../../sections";
 
 interface ContainerProps {
   children: React.ReactNode;
@@ -11,6 +12,8 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
       <div className="w-full h-[400px] absolute top-0 z-0 bg-gradient-to-b from-[#010918] to-[#2c3e50]"></div>
       <Header />
       {children}
+      <Contact />
+      <Footer />
     </main>
   );
 };

@@ -57,7 +57,10 @@ const About = () => {
 
         {/* Image */}
         <div className="w-2/5">
-          <RightAngleContainer imageUrl="/assets/pngs/photo_5897946453937080090_y.png" />
+          <RightAngleContainer
+            imageUrl="/assets/pngs/photo_5897946453937080090_y.png"
+            size="xl"
+          />
         </div>
       </div>
 
@@ -73,7 +76,10 @@ const About = () => {
             <div className="w-[76%] px-20 translate-y-3/4 mx-auto flex items-center justify-center gap-14">
               {/* Image */}
               <div className="w-1/2">
-                <RightAngleContainer imageUrl="/assets/pngs/dji_0136.png" />
+                <RightAngleContainer
+                  imageUrl="/assets/pngs/dji_0136.png"
+                  size="xl"
+                />
               </div>
 
               {/* Steps */}
