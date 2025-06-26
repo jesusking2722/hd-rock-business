@@ -1,4 +1,5 @@
-import { Button, TwoAnglesContainer } from "../../common";
+import { Button } from "../../common";
+import { TwoAnglesContainer } from "../../templates";
 
 const Hero = () => {
   return (

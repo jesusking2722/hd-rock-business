@@ -16,7 +16,7 @@ const navItems: NavItemType[] = [
 
 const Header = () => {
   return (
-    <header className="w-full fixed top-0 p-4 z-10">
+    <header className="w-full absolute top-0 p-4 z-10">
       <nav className="w-[80%] mx-auto flex items-end justify-between px-8">
         {/* Logo & Navs */}
         <div className="flex gap-14 items-end">
