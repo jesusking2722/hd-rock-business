@@ -1,37 +1,36 @@
-import { useState } from "react";
+interface RadioGroupProps {
+  totalSlides: number;
+  currentSlide: number;
+  onSlideChange: (index: number) => void;
+}
 
-const RadioGroup = () => {
-  const [selectedValue, setSelectedValue] = useState("option2");
-
-  const options = [
-    { id: "option1", value: "option1", label: "Option 1" },
-    { id: "option2", value: "option2", label: "Option 2" },
-    { id: "option3", value: "option3", label: "Option 3" },
-    { id: "option4", value: "option4", label: "Option 4" },
-  ];
-
-  const handleChange = (value: any) => {
-    setSelectedValue(value);
+const RadioGroup: React.FC<RadioGroupProps> = ({
+  totalSlides,
+  currentSlide,
+  onSlideChange,
+}) => {
+  const handleChange = (slideIndex: number) => {
+    onSlideChange(slideIndex);
   };
 
   return (
     <>
       {/* Radio Group */}
       <div className="flex items-center gap-4 mb-6">
-        {options.map((option) => (
-          <div key={option.id} className="flex flex-col items-center gap-2">
+        {Array.from({ length: totalSlides }, (_, index) => (
+          <div key={index} className="flex flex-col items-center gap-2">
             <button
-              onClick={() => handleChange(option.value)}
+              onClick={() => handleChange(index)}
               className={`lg:w-8 lg:h-8 xl:w-8 xl:h-8 w-6 h-6 rounded-full border-2 border-[#BDBDBD] shadow-sm transition-all duration-200 ease-in-out focus:outline-none focus:border-[#F9A825] ${
-                selectedValue === option.value
+                currentSlide === index
                   ? "border-[#F9A825] shadow-[#F9A825]"
                   : "border-[#BDBDBD] shadow-[#BDBDBD]"
               }`}
-              aria-label={option.label}
+              aria-label={`Slide ${index + 1}`}
               role="radio"
-              aria-checked={selectedValue === option.value}
+              aria-checked={currentSlide === index}
             >
-              {selectedValue === option.value ? (
+              {currentSlide === index ? (
                 <div className="lg:w-4 lg:h-4 xl:w-4 xl:h-4 w-3 h-3 bg-[#F9A825] rounded-full mx-auto"></div>
               ) : (
                 <div className="lg:w-4 lg:h-4 xl:w-4 xl:h-4 w-3 h-3 bg-[#BDBDBD] rounded-full mx-auto"></div>
@@ -41,17 +40,16 @@ const RadioGroup = () => {
         ))}
       </div>
 
-      {/* Hidden native radio inputs for form submission */}
       <div className="sr-only">
-        {options.map((option) => (
+        {Array.from({ length: totalSlides }, (_, index) => (
           <input
-            key={option.id}
+            key={index}
             type="radio"
-            id={option.id}
-            name="radioGroup"
-            value={option.value}
-            checked={selectedValue === option.value}
-            onChange={(e) => handleChange(e.target.value)}
+            id={`slide-${index}`}
+            name="slideGroup"
+            value={index}
+            checked={currentSlide === index}
+            onChange={() => handleChange(index)}
           />
         ))}
       </div>

@@ -5,7 +5,7 @@ const Roadmap = () => {
   return (
     <>
       {/* Desktop */}
-      <section className="w-[76%] mx-auto mt-24 px-20 hidden xl:block lg:block">
+      <section className="xl:w-full xl:px-10 w-[76%] mx-auto mt-24 px-20 hidden xl:block lg:block">
         <div className="home-group24">
           <div className="home-group19">
             <div className="home-image1">

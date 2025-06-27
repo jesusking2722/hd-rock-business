@@ -69,18 +69,23 @@ const About = () => {
         {/* Intro about location & port */}
         <div id="logistics" className="w-full mt-28">
           <LeftAngleContainer imageUrl="/assets/pngs/freepik_edit_The-style-is-candid-image-photography-with-natural (23).png">
-            <div className="absolute top-10 w-full mx-auto">
+            <div className="absolute xl:top-3 top-10 w-full mx-auto">
               <h1 className="text-white font-extrabold text-5xl font-titillium tracking-wider leading-tight z-10 text-center">
                 Location & Port Logistics
               </h1>
             </div>
             <div className="absolute inset-0">
-              <div className="w-[76%] px-20 translate-y-3/4 mx-auto flex items-center justify-center gap-14">
+              <div className="w-[76%] xl:w-[90%] xl:px-10 px-20 xl:translate-y-1/2 translate-y-3/4 mx-auto flex items-center justify-center gap-14">
                 {/* Image */}
                 <div className="w-1/2">
-                  <RightAngleContainer
+                  {/* <RightAngleContainer
                     imageUrl="/assets/pngs/dji_0136.png"
                     size="xl"
+                  /> */}
+                  <img
+                    src="/assets/pngs/desktop_port.png"
+                    alt="Port"
+                    className="w-full h-auto"
                   />
                 </div>
 

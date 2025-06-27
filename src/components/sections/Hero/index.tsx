@@ -7,7 +7,7 @@ const Hero = () => {
       <TwoAnglesContainer imageUrl="/assets/pngs/freepik_edit_The-style-is-candid-image-photography-with-natural (17).png">
         {/* Content overlay */}
         <div className="absolute inset-0 flex items-center">
-          <div className="w-[80%] mx-auto">
+          <div className="w-[80%] mx-auto flex items-center justify-between">
             <div className="px-8 space-y-8">
               <h1 className="text-white font-extrabold text-7xl font-titillium tracking-wider leading-tight">
                 High-Density Offshore
@@ -23,6 +23,7 @@ const Hero = () => {
                 <br />
                 and energy infrastructure projects across Europe and beyond.
               </p>
+
               <Button
                 type="primary"
                 label="Request Specs"
@@ -30,6 +31,13 @@ const Hero = () => {
                 className="font-semibold"
               />
             </div>
+            <button>
+              <img
+                src="/assets/svgs/play.svg"
+                alt="Play"
+                className="w-48 h-48 transition-all duration-200 hover:scale-105"
+              />
+            </button>
           </div>
         </div>
       </TwoAnglesContainer>

@@ -32,7 +32,7 @@ const Footer = () => {
       </div>
 
       {/* Mobile */}
-      <div className="w-full flex flex-col items-center justify-center gap-4">
+      <div className="w-full flex-col items-center justify-center gap-4 lg:hidden xl:hidden flex">
         <img src="/assets/svgs/logo.svg" alt="Logo" className="w-16 h-auto" />
         <span className="text-white font-normal text-base">
           © {year} Company Name, Inc.

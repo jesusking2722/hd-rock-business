@@ -52,7 +52,7 @@ const Header = () => {
         </div>
 
         {/* Get a Quote Button */}
-        <div className="pr-14">
+        <div className="pr-14 xl:pr-4">
           <Button type="secondary" label="Get a Quote" />
         </div>
       </nav>

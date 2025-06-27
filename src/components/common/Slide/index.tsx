@@ -15,7 +15,7 @@ const Slide: React.FC<ISlide> = ({ imageUrl, title, description, date }) => {
           className="w-full h-full object-cover rounded-md"
         />
       </div>
-      <div className="w-3/5 flex flex-col py-4">
+      <div className="w-3/5 py-4">
         <h2 className="text-xl font-black text-white font-titillium leading-tight">
           {title}
         </h2>
