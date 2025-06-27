@@ -4,6 +4,7 @@ import {
   Roadmap,
   Offer,
   TrackRecord,
+  Team,
 } from "../../components/sections";
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <Roadmap />
       <Offer />
       <TrackRecord />
+      <Team />
     </div>
   );
 };

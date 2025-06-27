@@ -15,7 +15,7 @@ const Contact = () => {
               "polygon(0% 0%, 35% 0%, 40% 15%, 60% 15%, 65% 0%, 100% 0%, 100% 100%, 0% 100%)",
           }}
         >
-          <div className="translate-y-1/3 mx-auto w-[70%] px-10">
+          <div className="translate-y-1/2 mx-auto w-[70%] px-10">
             <ContactForm />
           </div>
         </div>

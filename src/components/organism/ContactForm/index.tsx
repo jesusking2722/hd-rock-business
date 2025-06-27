@@ -1,12 +1,63 @@
 import { Link } from "react-router";
 import { Button, Input, TextArea } from "../../common";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const [firstname, setFirstname] = useState<string>("");
   const [lastname, setLastname] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [success, setSuccess] = useState<any>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const form = useRef<any>(null);
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+    setLoading(true);
+
+    // Create template parameters that match your EmailJS template
+    const templateParams = {
+      title: "New Contact Form Submission",
+      name: `${firstname} ${lastname}`,
+      email: email,
+      message: message,
+      time: new Date().toLocaleString(),
+    };
+
+    emailjs
+      .send(
+        "service_qkatpem",
+        "template_ve9tlre",
+        templateParams,
+        "6TszNiR5tE4jag6bZ"
+      )
+      .then(
+        (result) => {
+          setLoading(false);
+          setSuccess(true);
+          setFirstname("");
+          setLastname("");
+          setEmail("");
+          setMessage("");
+
+          // Hide success message after 10 seconds
+          setTimeout(() => {
+            setSuccess(null);
+          }, 10000);
+        },
+        (error) => {
+          setLoading(false);
+          console.error("EmailJS Error:", error);
+          setSuccess(false);
+
+          // Hide error message after 10 seconds
+          setTimeout(() => {
+            setSuccess(null);
+          }, 10000);
+        }
+      );
+  };
 
   return (
     <div className="w-full bg-[#364C62] lg:rounded-2xl xl:rounded-2xl rounded-lg lg:p-8 xl:p-8 p-4">
@@ -83,7 +134,7 @@ const ContactForm = () => {
         </div>
 
         <div className="lg:w-1/2 xl:w-1/2 w-full bg-[#324659] lg:p-6 xl:p-6 p-4 lg:mt-0 xl:mt-0 mt-6 rounded-2xl">
-          <form className="w-full space-y-4">
+          <form ref={form} className="w-full space-y-4" onSubmit={sendEmail}>
             <div className="w-full flex flex-row items-center gap-4">
               <div className="w-1/2">
                 <Input
@@ -110,14 +161,7 @@ const ContactForm = () => {
                 onChange={setEmail}
               />
             </div>
-            <div className="w-full">
-              <Input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={setEmail}
-              />
-            </div>
+
             <div className="w-full">
               <TextArea
                 placeholder="Message"
@@ -125,8 +169,27 @@ const ContactForm = () => {
                 onChange={setMessage}
               />
             </div>
+            {typeof success === "boolean" && (
+              <div className="w-full">
+                {success ? (
+                  <p className="text-green-500 text-sm">
+                    Message sent successfully, we will keep in touch with you
+                    very soon.
+                  </p>
+                ) : (
+                  <p className="text-red-500 text-sm">
+                    Something went wrong, please reload the page and resubmit.
+                  </p>
+                )}
+              </div>
+            )}
             <div className="w-full flex items-center justify-end">
-              <Button type="primary" label="Submit" />
+              <Button
+                type="primary"
+                label="Submit"
+                submit={true}
+                loading={loading}
+              />
             </div>
           </form>
         </div>

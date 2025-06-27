@@ -3,6 +3,8 @@ interface ButtonProps {
   label?: string;
   iconUrl?: string;
   className?: string;
+  submit?: boolean;
+  loading?: boolean;
   onClick?: () => void;
 }
 
@@ -11,6 +13,8 @@ const Button: React.FC<ButtonProps> = ({
   label,
   iconUrl,
   className,
+  submit,
+  loading,
   onClick,
 }) => {
   const buttonTypeStyles: Record<ButtonProps["type"], string> = {
@@ -23,10 +27,20 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      className={`${buttonTypeStyles[type]} text-lg font-normal transition-all duration-200 ease-in-out hover:opacity-80 rounded-lg px-6 py-2 flex items-center justify-center gap-2 ${className}`}
+      className={`${
+        buttonTypeStyles[type]
+      } text-lg font-normal transition-all duration-200 ease-in-out hover:opacity-80 rounded-lg px-6 py-2 flex items-center justify-center gap-2 ${
+        loading ? "opacity-80 cursor-not-allowed" : ""
+      } ${className}`}
+      type={submit ? "submit" : "button"}
+      disabled={loading}
+      onClick={onClick}
     >
-      {label}
-      {iconUrl && (
+      {loading && (
+        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-current"></div>
+      )}
+      {loading ? "Loading..." : label}
+      {!loading && iconUrl && (
         <img
           src={iconUrl}
           alt={label || "icon"}
