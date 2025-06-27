@@ -8,8 +8,8 @@ const Offer = () => {
           alt="Group 26"
           className="w-full h-auto z-0"
         />
-        <div className="absolute inset-0 z-10">
-          <div className="w-[76%] translate-y-1/2 xl:translate-y-[150px] mx-auto bg-[#2C3E50BF] rounded-2xl p-6 xl:p-4 flex justify-center gap-6">
+        <div className="absolute inset-0 z-10 flex items-center justify-center">
+          <div className="w-[76%] mt-[40px] mx-auto bg-[#2C3E50BF] rounded-2xl p-6 xl:p-4 flex justify-center gap-6">
             <div className="w-2/5 flex flex-col justify-between gap-6">
               <div className="w-full bg-[#364C6280] rounded-xl border-2 border-[#364C62] p-8">
                 <span className="font-normal text-xl xl:text-base text-white">
