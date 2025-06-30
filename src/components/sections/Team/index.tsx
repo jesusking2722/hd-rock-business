@@ -54,7 +54,7 @@ const Team = () => {
               alt="Line"
               className="w-5 h-auto"
             />
-            <span className="font-normal text-lg text-white">CEO/Norway</span>
+            <span className="font-normal text-lg text-white">CEO/Poland</span>
           </div>
           <div className="flex items-center gap-2">
             <img src="/assets/svgs/user.svg" alt="User" className="w-5 h-5" />
@@ -70,7 +70,7 @@ const Team = () => {
               alt="Line"
               className="w-5 h-auto"
             />
-            <span className="font-normal text-lg text-white">CEO/Norway</span>
+            <span className="font-normal text-lg text-white">CEO/Poland</span>
           </div>
           <div className="flex items-center gap-2">
             <img src="/assets/svgs/user.svg" alt="User" className="w-5 h-5" />

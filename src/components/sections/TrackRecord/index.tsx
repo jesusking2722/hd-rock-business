@@ -16,10 +16,28 @@ const TrackRecord = () => {
       date: "12-01-2021",
     },
     {
-      imageUrl: "/assets/pngs/slide1.png",
+      imageUrl: "/assets/pngs/slide3.png",
       title: "Baltic Pipe",
       description: "Gas Pipeline",
       date: "10-01-2023",
+    },
+    {
+      imageUrl: "/assets/pngs/slide4.png",
+      title: "Dogger Bank A",
+      description: "Offshore Wind",
+      date: "10-01-2023",
+    },
+    {
+      imageUrl: "/assets/pngs/slide5.png",
+      title: "Dogger Bank B",
+      description: "Offshore Wind",
+      date: "10-01-2023",
+    },
+    {
+      imageUrl: "/assets/pngs/slide6.png",
+      title: "Dogger Bank C",
+      description: "Offshore Wind",
+      date: "2024 (Ongoing)",
     },
   ];
 
